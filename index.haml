@@ -25,6 +25,11 @@
 				})
 			//
 	%body.noscroll
+		#preloader
+			.loader
+				.loader-inner.pacman
+					- 5.times do
+						%div
 		%section.intro
 			.intro__copy
 				.wrapper
@@ -35,7 +40,7 @@
 						Hello! I'm Oleg, a digital designer and coder based in Berlin.
 			%a.arrow{:href => "#first"}
 		%section#first.projects
-			.projects-stage 
+			.projects-stage
 				%a.project-preview.hj{"data-modal-target" => "hj"}
 					%figure.project-figure
 						.project-tmb-overlay
@@ -186,11 +191,6 @@
 	%script{:src => "dist/js/main-min.js", :type => "text/javascript"}
 	%script{:src => "dist/js/remodal-min.js", :type => "text/javascript"}
 	/ Preloader
-	#preloader
-		.loader
-			.loader-inner.pacman
-				- 5.times do
-					%div
 				
 
 
