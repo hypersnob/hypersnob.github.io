@@ -1,0 +1,61 @@
+body{
+	font: 100% "Work Sans", Helvetica, sans-serif;
+	color: $gray700;
+	background-color: $gray50;
+	line-height: 1.5;
+	&.noscroll{
+		overflow: hidden;
+	}
+}
+
+a{
+	color: $gray500;
+	font-weight: 300;
+	position: relative;
+	transition: color 0.2s ease-in-out;
+	text-decoration: none;
+	white-space: nowrap;
+	outline: none;
+	&:hover,
+	&:focus{
+		color: $gray600;
+		outline: none;
+	}
+}
+ p{
+ 	font-weight: 300;
+ }
+
+.wrapper{
+	max-width: 74rem;
+	margin-right: auto;
+    margin-left: auto;
+    padding: 0 2rem;
+	@include breakpoint(phone){
+		padding: 0 1rem;
+	}
+}
+
+.content{
+	padding-top: 8rem;
+	text-align: center;
+}
+
+.arrow{
+	height: 2rem;
+	width: 2rem;
+	border-bottom: 1px solid $gray300;
+	border-right: 1px solid $gray300;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -1rem;
+	transition: .4s;
+	transform: rotate(45deg);
+}
+
+.notification{
+	display: none;
+}
+
+

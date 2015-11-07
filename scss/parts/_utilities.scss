@@ -1,0 +1,79 @@
+// Strip units
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// Convert pixels to rems
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $font-size-root;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+// List Reset
+%list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Vertical Centering
+%vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Media Querries
+@mixin breakpoint($class) {
+  @if $class == phone {
+    @media (max-width: 768px) { @content; }
+  }
+ 
+  @else if $class == tablet {
+    @media (min-width: 769px) { @content; }
+  }
+ 
+  @else if $class == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg-desktop {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: phone, tablet, desktop, lg-desktop ";
+  }
+}
+
+// Clearfix
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+%text-center {
+  text-align: center;
+}
+%text-left{
+  text-align: left;
+}
+@mixin pseudo-box($color){
+  content: "";
+  display: block;
+  background-color: $color;
+  position: absolute;
+}
+
+
+
+

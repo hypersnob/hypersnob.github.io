@@ -1,0 +1,126 @@
+.over-wrapper{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	overflow: auto;
+	
+}
+.over{
+	padding: 10rem 0 5rem;
+	display: none;
+	text-align: center;
+	background-color: $white;
+	&.over-is-initialized{
+		display: block;
+	}
+	&.legal{
+		h2,
+		h3{
+			@extend %text-left;
+			font-weight: 400;
+			margin-bottom: .5em; 
+		}
+		p{
+			@extend %text-left;
+		}
+	}
+	h1,
+	p{
+		transition: all .5s ease-out;
+		opacity: .3;
+	}
+	h1{
+		color: $gray700;
+		text-transform: uppercase;
+		font-size: 2.5rem;
+		padding-bottom: .25em;
+		margin-bottom: .5em;
+		position: relative;
+		border-bottom: 1px solid $gray200;
+	}
+	p{
+		color: $gray600;
+	}
+	.label{
+		display: inline-block;
+		background-color: $gray100;
+		font-size: .8em;
+		color: $gray500; 
+		border-radius: 1em;
+		padding: rem(2) 1rem;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+	.wrapper{
+		max-width: 52rem;
+		z-index: 110;
+	}
+	.close{
+		position: absolute;
+		right: 2em;
+		top: 2em;
+		cursor: pointer;
+		width: 5rem;
+		height: 5rem;
+		transition: .35s;
+		&:before,
+		&:after{
+			@include pseudo-box($gray500);
+			width: 100%;
+			height: 1px;
+			top: 50%;
+		}
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+		&:hover{
+			transform: rotate(-180deg);
+		}
+	}
+	.stage{
+		background-color: $gray100;
+		p{
+			margin: 0;
+			&:first-child{
+				padding-top: 2rem;
+			}
+		}
+	}
+}
+.over-wrapper.over-is-opening {
+	animation: over-opening 0.5s;
+}
+.over-wrapper.over-is-closing {
+	animation: over-closing 0.5s;
+}
+.over.over-is-opened{
+	h1,
+	p{
+		opacity: 1;
+	}
+}
+@keyframes over-opening {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+@keyframes over-closing {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(100%);
+	}
+}
+
