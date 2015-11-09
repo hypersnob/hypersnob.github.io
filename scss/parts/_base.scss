@@ -44,14 +44,15 @@ a{
 .arrow{
 	height: 2rem;
 	width: 2rem;
-	border-bottom: 1px solid $gray300;
-	border-right: 1px solid $gray300;
+	border-bottom: 1px solid $gray400;
+	border-right: 1px solid $gray400;
 	display: block;
 	position: absolute;
 	left: 50%;
 	margin-left: -1rem;
 	transition: .4s;
 	transform: rotate(45deg);
+	cursor: pointer;
 }
 
 .notification{
