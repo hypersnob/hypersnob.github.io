@@ -4,7 +4,7 @@
 	top: 0;
 	height:80vh;
 	width: 100%;
-	z-index: -10;
+	z-index: -1;
 	.intro-copy{
 		position: absolute;
 		top: 50%;
@@ -56,7 +56,6 @@
 	margin-top: 80vh;
 	@extend %text-center;
 	background-color: $gray200;
-	z-index: 20;
 	.projects-stage{
 		max-width: 96rem;
 		margin: 0 auto;
@@ -159,7 +158,6 @@ a.project-preview{
 // Info
 .info{
 	padding-top: 8rem;
-	position: relative;
 	@include clearfix();
 	@include breakpoint(phone){
 		display: none;
