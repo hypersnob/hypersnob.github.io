@@ -1,0 +1,13 @@
+.opl {
+	position:fixed;
+	top: 5rem;
+	right: 0;
+	z-index: 100;
+	a {
+		width:rem(73);
+		height: rem(56);
+		text-indent: rem(-9999);
+		display:block;
+		background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.png') no-repeat;
+	}
+}
