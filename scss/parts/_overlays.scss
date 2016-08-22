@@ -13,6 +13,9 @@
 	display: none;
 	text-align: center;
 	background-color: $white;
+	a{
+		font-weight: 400;
+	}
 	&.over-is-initialized{
 		display: block;
 	}

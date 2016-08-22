@@ -87,7 +87,7 @@ a.project-preview{
 		width: 50%;
 		float: left;
 	}
-	@each $project in hj, bos, fp, savry {
+	@each $project in mybet, cabrio, hj, bos, fp, savry {
 		&.#{$project}{
 			.project-tmb-overlay{
 				background-color: map-get($project-colors, $project);

@@ -43,6 +43,20 @@
 			.arrow
 		%section.projects
 			.projects-stage
+				%a.project-preview.mybet{"data-modal-target" => "mybet"}
+					%figure.project-figure
+						.project-tmb-overlay
+						%img{:src => "dist/img/projects/mybet-tmb.jpg"}
+						%figcaption.project-caption
+							%h2 mybet.com
+							%p Platform Relaunch
+				%a.project-preview.cabrio{"data-modal-target" => "cabrio"}
+					%figure.project-figure
+						.project-tmb-overlay
+						%img{:src => "dist/img/projects/cabrio-tmb.jpg"}
+						%figcaption.project-caption
+							%h2 Marcedes-Benz
+							%p Webspecial
 				%a.project-preview.hj{"data-modal-target" => "hj"}
 					%figure.project-figure
 						.project-tmb-overlay
@@ -111,25 +125,63 @@
 					%li
 						%a{:href =>"https://www.linkedin.com/in/olegzayarniy", "target" => "_blanc"} Linkedin
 		%h1.notification Sorry, this website don't support your browser.
+		.over.mybet{"data-modal-id" => "mybet"}
+			.close{"data-modal-action" => "close"}
+			.wrapper
+				%h1 mybet.com
+				%p
+					New interface design of the online betting platform
+					= succeed "." do
+						%a{:href =>"https://www.newmybet.com/", :rel => "nofollow", "target" => "_blanc"} mybet.com
+					This product is the result of a great effort and careful development done by a highly professional team which I am part of.
+					%br This is my largest project so far.
+				%p
+					%span.label Design
+					%span.label Interface
+					%span.label UI
+					%span.label UX
+				.stage
+					%img{:src => "dist/img/projects/mybet-sport-home.jpg"}
+		.over.cabrio{"data-modal-id" => "cabrio"}
+			.close{"data-modal-action" => "close"}
+			.wrapper
+				%h1 Cabriolet and Roadster Special
+				%p
+					Mercedes-Benz
+					%a{:href =>"https://cabriolet-roadster.mercedes-benz.com/com/en/intro.html", :rel => "nofollow", "target" => "_blanc"} web special
+					I have been working on for the agency
+					= succeed "." do
+						%b antony
+				%p
+					%span.label Design
+					%span.label Asset Production
+				.stage
+					%img{:src => "dist/img/projects/cabrio01.jpg"}
+					%img{:src => "dist/img/projects/cabrio02.jpg"}
+					%img{:src => "dist/img/projects/cabrio03.jpg"}
+					%img{:src => "dist/img/projects/cabrio04.jpg"}
 		.over.hj{"data-modal-id" => "hj"}
 			.close{"data-modal-action" => "close"}
 			.wrapper
 				%h1 Headjet.net
 				%p
-					Headjet is a Berlin based start-up, co-founded by me that helps Western firms to find IT specialists in Eastern Europe and vice versa. My part was product design and front-end development.
+					%a{:href =>"https://www.headjet.net/", :rel => "nofollow", "target" => "_blanc"} Headjet
+					is a Berlin based start-up, co-founded by me that helps Western firms to find IT specialists in Eastern Europe and vice versa. My part was product design and front-end development.
 				%p
 					%span.label Logo
 					%span.label Design
 					%span.label Front-end
 					%span.label Bootstrap 4
 				.stage
-					%img{:src => "dist/img/projects/hj-home.jpg"}
+					%img{:src => "dist/img/projects/hj-home.png"}
 		.over.bos{"data-modal-id" => "bos"}
 			.close{"data-modal-action" => "close"}
 			.wrapper
 				%h1 Orangutan.de
 				%p
-					I have designed a new responsive website for non-profit organization BOS Deutschland e.V. which supports rescue projects for orangutans and rainforest conservation projects in Borneo.
+					I have designed a new responsive
+					%a{:href =>"https://www.orangutan.de/", :rel => "nofollow", "target" => "_blanc"} website
+					for non-profit organization BOS Deutschland e.V. which supports rescue projects for orangutans and rainforest conservation projects in Borneo.
 				%p
 					%span.label Design
 					%span.label UX
@@ -142,7 +194,9 @@
 				%p
 					Fitness Point is a successful app to track your progress at the gym.
 					%br
-						I've designed and coded a new responsive landing page and the web version of the app.
+						I've designed and coded a new responsive
+						%a{:href =>"http://www.fitnesspointapp.com/", :rel => "nofollow", "target" => "_blanc"} landing page
+						and the web version of the app.
 				%p
 					%span.label Design
 					%span.label Front-end
@@ -163,32 +217,6 @@
 				.stage
 					%img{:src => "dist/img/projects/savry-phone.jpg"}
 					%img{:src => "dist/img/projects/savry-home.jpg"}
-		-#.over.legal{"data-modal-id" => "legal"}
-			.close{"data-modal-action" => "close"}
-			.wrapper
-				%h1 Impressum
-				%p Inhaltlich verantwortlich gemäß §6 TDG / §10 MDStV / V.i.s.d.P ist
-				%p 
-					Oleg Zayarniy<br>
-					Exerzierstr. 23<br>
-					13357 Berlin
-				%p 
-					+491791271161<br>
-					olegza@gmail.com
-				 
-				%h3
-					Haftung für Inhalte
-				%p
-					Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-
-				%h3 Haftung für Links
-
-				%p 
-					Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-
-				%h3 Urheberrecht
-				%p
-					Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 	/ Google Analytics
 	:javascript
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
