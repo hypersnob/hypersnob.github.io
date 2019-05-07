@@ -54,12 +54,16 @@
 // Projects
 .projects{
 	margin-top: 80vh;
-	@extend %text-center;
+	// @extend %text-center;
 	background-color: $gray200;
 	.projects-stage{
 		max-width: 96rem;
 		margin: 0 auto;
-		@include clearfix();
+		// @include clearfix();
+		@include breakpoint(tablet){
+			display:flex;
+			flex-wrap: wrap;
+		}
 		img{
 			max-width: 100%;
 			height: auto;
@@ -82,12 +86,13 @@ a.project-preview{
 	line-height: 0;
 	overflow: hidden;
 	cursor: pointer;
+	text-align: center;
 	transition: all 0.3s ease-in-out;
 	@include breakpoint(tablet){
-		width: 50%;
-		float: left;
+		flex: 0 0 50%;
+		max-width:50%;
 	}
-	@each $project in mybet, cabrio, hj, bos, fp, savry {
+	@each $project in moberries, atomleap, creamcredit, cabrio, bos, mybet  {
 		&.#{$project}{
 			.project-tmb-overlay{
 				background-color: map-get($project-colors, $project);
