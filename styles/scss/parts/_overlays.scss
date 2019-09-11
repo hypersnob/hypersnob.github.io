@@ -1,4 +1,4 @@
-.over-wrapper{
+.modal{
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -6,18 +6,28 @@
 	right: 0;
 	z-index: 500;
 	overflow: auto;
-	
-}
-.over{
 	padding: 10rem 0 5rem;
 	display: none;
 	text-align: center;
 	background-color: $white;
+	transform: translateY(100%);
 	a{
 		font-weight: 400;
 	}
-	&.over-is-initialized{
+	&.opening{
 		display: block;
+    animation: modal-opening 0.5s;
+	}
+	&.open{
+		display: block;
+		transform: translateY(0);
+		h1,
+		p{
+			opacity: 1;
+		}
+	}
+	&.closing{
+		animation: modal-closing 0.5s;
 	}
 	&.legal{
 		h2,
@@ -98,19 +108,8 @@
 		}
 	}
 }
-.over-wrapper.over-is-opening {
-	animation: over-opening 0.5s;
-}
-.over-wrapper.over-is-closing {
-	animation: over-closing 0.5s;
-}
-.over.over-is-opened{
-	h1,
-	p{
-		opacity: 1;
-	}
-}
-@keyframes over-opening {
+
+@keyframes modal-opening {
 	from {
 		transform: translateY(100%);
 	}
@@ -118,7 +117,7 @@
 		transform: translateY(0);
 	}
 }
-@keyframes over-closing {
+@keyframes modal-closing {
 	from {
 		transform: translateY(0);
 	}
